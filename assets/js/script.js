@@ -37,3 +37,20 @@ footer.style.marginTop = "40px";
 footer.style.fontSize = "14px";
 footer.style.color = "#777";
 document.body.appendChild(footer);
+
+try{
+ //Código de conexión a la API
+}
+catch(error){
+ console.log(error)
+}
+
+const apiUrl = "https://api.example.com/data";
+
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok " + response.statusText);
+    } 
+    return response.json();
+  })
